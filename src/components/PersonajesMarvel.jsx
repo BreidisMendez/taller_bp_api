@@ -6,6 +6,12 @@ const PersonajesMarvel = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
 
+    useEffect(() => {
+        if (isLoading) {
+          fetchPersonajes();
+        }
+      }, [isLoading]);
+
   return (
     <div>PersonajesMarvel</div>
   )
