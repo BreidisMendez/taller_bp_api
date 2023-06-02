@@ -43,8 +43,29 @@ const PersonajesMarvel = () => {
       };
 
   return (
-    <div>PersonajesMarvel</div>
-  )
-}
+<div>
+        <h1>Personajes de Marvel</h1>
+        <h2>PD: Algunas imagenes no funcionan</h2>
+        
+        <div>
+          <button onClick={handleLoadPersonajes}>Traer Personajes</button>
+          <button onClick={handlePreviousPage}>Anterior</button>
+          <button onClick={handleNextPage}>Siguiente</button>
+        </div>
+        <ul>
+          {Personajes.map((serie) => (
+            <li key={serie.id}>
+              <h3>{serie.name}</h3>
+              <img
+                src={`${serie.thumbnail.path}/standard_fantastic.${serie.thumbnail.extension}`}
+                alt={serie.name}
+              />
+            </li>
+          ))}
+        </ul>
+        <h3>Breidis Mendez</h3>
+      </div>
+    );
+  };
 
 export default PersonajesMarvel
