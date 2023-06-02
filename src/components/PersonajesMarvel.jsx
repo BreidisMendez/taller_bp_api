@@ -29,6 +29,19 @@ const PersonajesMarvel = () => {
         setIsLoading(true);
       };
 
+      
+      const handlePreviousPage = () => {
+        if (currentPage > 0) {
+          setCurrentPage(currentPage - 1);
+          setIsLoading(true);
+        }
+      };
+    
+      const handleNextPage = () => {
+        setCurrentPage(currentPage + 1);
+        setIsLoading(true);
+      };
+
   return (
     <div>PersonajesMarvel</div>
   )
