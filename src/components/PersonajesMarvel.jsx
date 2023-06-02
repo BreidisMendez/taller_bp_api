@@ -24,6 +24,11 @@ const PersonajesMarvel = () => {
         console.log(data)
       };
 
+      const handleLoadPersonajes = () => {
+        setCurrentPage(0); // Reinicia la página al cargar nuevas Personajes
+        setIsLoading(true);
+      };
+
   return (
     <div>PersonajesMarvel</div>
   )
